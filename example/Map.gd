@@ -15,7 +15,7 @@ func _ready():
 	
 	for k in map_data.nodes.keys():
 		var point = map_data.nodes[k]
-		var event = event_scene.instance()
+		var event = event_scene.instantiate()
 		event.position = point * map_scale + Vector2(200, 0)
 		add_child(event)
 		events[k] = event
